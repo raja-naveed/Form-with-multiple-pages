@@ -1,16 +1,28 @@
 import * as Yup from 'yup';
 
-export const schema = Yup.object({
-  name: Yup.string().required('Name is required'),
-  email: Yup.string().email('Invalid email format').required('Email is required'),
-  date: Yup.date().nullable().required('Date of Birth is required'),
-  country: Yup.string().required('Country is required'),
-  school: Yup.string().required('School Name is required'),
-  degree: Yup.string().required('Degree is required'),
-  graduate: Yup.date().nullable().required('Graduation Date is required'),
-  fyp: Yup.string().required('FYP Project is required'),
-  profession: Yup.string().required('Profession is required'),
-  company: Yup.string().required('Company is required'),
-  skill: Yup.string().required('Skill is required'),
-  experience: Yup.string().required('Experience is required'),
+const schema = Yup.object().shape({
+  email: Yup.string().email('Invalid email').required('Email is required'),
+  confirmEmail: Yup.string()
+    .oneOf([Yup.ref('email'), null], 'Emails must match')
+    .required('Confirm email is required'),
+  firstName: Yup.string().required('First name is required'),
+  lastName: Yup.string().required('Last name is required'),
+  dateOfBirth: Yup.date().nullable().required('Date of birth is required'),
+  // countrycode: Yup.string().required('Country code is required'),
+  // phoneNumber: Yup.string().required('Phone number is required'),
+  // nic: Yup.string().required('National ID number (CNIC) is required'),
+  // address1: Yup.string().required('Address 1 is required'),
+  // address2: Yup.string(),
+  // city: Yup.string().required('City is required'),
+  // state: Yup.string().required('State/Region is required'),
+  // zipCode: Yup.string().required('ZIP code/Post code is required'),
+  // qualifications: Yup.string().required('Please select your qualifications'),
+  // yearOfCompletion: Yup.string().required('Please select year of completion'),
+  // university: Yup.string().required('University name is required'),
+  // experience: Yup.string().required('Experience is required'),
+  // employement: Yup.string().required("Employment status is required"),
+  // Add more validations for other fields as needed
+
 });
+
+export default schema;

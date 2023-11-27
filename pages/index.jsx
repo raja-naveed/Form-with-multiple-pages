@@ -1,11 +1,10 @@
 
 import Form from "@/components/Form";
+import Formone from "@/components/Formone";
 import Head from "next/head";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
-  const { value } = useSelector((state) => state.counter);
-  const dispatch = useDispatch();
 
   return (
     <>
@@ -15,6 +14,7 @@ export default function Home() {
 
       <main>
        <Form/>
+       {/* <Formone/> */}
       
 
       </main>

@@ -1,11 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
-import counterSlice from "./features/counterSlice";
-import visitorSlice from './features/dataSlice';
+import { configureStore } from '@reduxjs/toolkit';
+import locationSlice from './features/locationSlice';
+import formSlice from './features/formSlice';
 
 const store = configureStore({
   reducer: {
-    counter: counterSlice,
-    visitor: visitorSlice,
+    location: locationSlice,
+    form: formSlice,
+
 
   },
 });
