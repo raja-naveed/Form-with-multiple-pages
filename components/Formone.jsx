@@ -87,8 +87,8 @@ const Formone = ({section, setSection , handleBack}) => {
       dispatch(setFormValues(values));
   
       if (section === 3) {
-        setSection(1); // Reset section to 1 when the form reaches section 3
         resetForm(); // Reset the form fields
+        setSection(1); // Reset section to 1 when the form reaches section 3
       } else {
         setSection(section + 1); // Move to the next section
       }
