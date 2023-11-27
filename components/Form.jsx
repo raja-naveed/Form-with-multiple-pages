@@ -240,6 +240,9 @@ const Form = () => {
                   value={values.lastName}
                   className="tracking-[2px] md:tracking-[0px] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[12px] placeholder:tracking-[2px] placeholder:md:tracking-[0px] w-[90%] max-w-[580px] text-center   bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none focus:bg-transparent"
                 />
+                {errors.lastName && touched.lastName && (
+                  <div className="text-[#dc3545]">{errors.lastName}</div>
+                )}
                 <div className="py-1"></div>
                 <div className="w-[90%] max-w-[580px]">
                   <input
@@ -295,6 +298,7 @@ const Form = () => {
                               className="absolute border rounded-sm left-0 mr-4 top-1/2 -translate-y-1/2  w-10"
                             />
                           )}
+                          
                         </span>
                       </div>
                     </div>
@@ -382,6 +386,9 @@ const Form = () => {
                   value={values.nic}
                   className="placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[12px] placeholder:tracking-[2px] placeholder:md:tracking-[0px] w-[90%] max-w-[580px]  text-center   bg-transparent text-black border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none"
                 />
+                  {errors.nic && touched.nic && (
+                    <div className="text-[#dc3545]">{errors.nic}</div>
+                  )}
                 <div className="py-1"></div>
                 <input
                   type="text"
@@ -392,6 +399,9 @@ const Form = () => {
                   value={values.address1}
                   className="placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[12px] placeholder:tracking-[2px] placeholder:md:tracking-[0px] w-[90%] max-w-[580px]  text-center   bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none"
                 />
+                 {errors.address1 && touched.address1 && (
+                    <div className="text-[#dc3545]">{errors.nic}</div>
+                  )}
                 <input
                   type="text"
                   placeholder="ADDRESS 2 (APARTMENT, SUITE, ETC.)"
@@ -401,6 +411,9 @@ const Form = () => {
                   value={values.address2}
                   className="placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[12px] placeholder:tracking-[2px] placeholder:md:tracking-[0px] w-[90%] max-w-[580px]  text-center   bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none"
                 />
+                {errors.address2 && touched.address2 && (
+                    <div className="text-[#dc3545]">{errors.address2}</div>
+                  )}
                 <input
                   type="text"
                   placeholder="CITY"
@@ -410,6 +423,9 @@ const Form = () => {
                   value={values.city}
                   className="placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[12px] placeholder:tracking-[2px] placeholder:md:tracking-[0px] w-[90%] max-w-[580px]  text-center   bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none"
                 />
+                {errors.city && touched.city && (
+                    <div className="text-[#dc3545]">{errors.city}</div>
+                  )}
                 <input
                   type="text"
                   placeholder="STATE / REGION"
@@ -419,6 +435,9 @@ const Form = () => {
                   value={values.state}
                   className="placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[12px] placeholder:tracking-[2px] placeholder:md:tracking-[0px] w-[90%] max-w-[580px]  text-center   bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none"
                 />
+                 {errors.state && touched.state && (
+                    <div className="text-[#dc3545]">{errors.state}</div>
+                  )}
                 <div className="relative w-[90%] max-w-[580px]">
                   <input
                     type="text"
@@ -429,6 +448,9 @@ const Form = () => {
                     value={values.zipCode}
                     className="placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[12px] placeholder:tracking-[2px] placeholder:md:tracking-[0px] w-full  text-center bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none"
                   />
+                  {errors.zipCode && touched.zipCode && (
+                    <div className="text-[#dc3545]">{errors.zipCode}</div>
+                  )}
                   <button
                     onClick={handleContinue}
                     className=" h-[120px] w-[120px] bg-black text-white tracking-widest text-[14px] absolute bottom-0 right-[-200px] rounded-lg flex items-center text-center justify-center uppercase"
@@ -531,6 +553,9 @@ const Form = () => {
                     OTHER
                   </option>
                 </select>
+                {errors.qualifications && touched.qualifications && (
+                    <div className="text-[#dc3545]">{errors.qualifications}</div>
+                  )}
                 <select
                   name="yearOfCompletion"
                   onChange={handleChange}
@@ -599,6 +624,9 @@ const Form = () => {
                     2010
                   </option>
                 </select>
+                {errors.yearOfCompletion && touched.yearOfCompletion && (
+                    <div className="text-[#dc3545]">{errors.yearOfCompletion}</div>
+                  )}
                 <input
                   type="text"
                   name="university"
@@ -608,6 +636,9 @@ const Form = () => {
                   placeholder="UNIVERSITY"
                   className="placeholder:text-[18px]  text-[18px] md:tracking-[0px] placeholder:text-black tracking-[2px] w-[90%] max-w-[580px]  outline-none bg-transparent  border placeholder:text-center text-center border-gray-500/50 rounded-xl py-3 focus:border-[#BE9F56] "
                 />
+                 {errors.university && touched.university && (
+                    <div className="text-[#dc3545]">{errors.university}</div>
+                  )}
                 <select
                   id="experience"
                   name="experience"
@@ -650,6 +681,9 @@ const Form = () => {
                     MORE THAN 7 YEARS
                   </option>
                 </select>
+                {errors.experience && touched.experience && (
+                    <div className="text-[#dc3545]">{errors.experience}</div>
+                  )}
                 <select
                   id="employement"
                   name="employement"
@@ -680,6 +714,9 @@ const Form = () => {
                     OTHER
                   </option>
                 </select>
+                {errors.employement && touched.employement && (
+                    <div className="text-[#dc3545]">{errors.employement}</div>
+                  )}
                 <section className="space-y-1 w-[90%] max-w-[580px] relative">
                   <div className=" flex-col flex justify-center items-center">
                     <label
@@ -695,6 +732,7 @@ const Form = () => {
                       className="hidden"
                       name="file"
                     />
+                  
                     <p className="text-[10px] absolute text-red-400 -bottom-2.5 w-full text-center"></p>
                   </div>
                   <div className="flex flex-col items-center gap-1">
